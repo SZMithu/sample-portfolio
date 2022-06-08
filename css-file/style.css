@@ -11,13 +11,17 @@
   *{
       box-sizing: border-box;
   }
+  .introduce-heading {
+    font:normal bolder 60px 'Kalam', cursive;
+  }
   /* Navbar */
   .header .navbar{
       padding: 1rem 8% !important;
+      background-color: rgba(10, 10, 10, .8);
 
   }
   .navbar-brand{
-      color: #002366 !important;
+      color: #97b0e0 !important;
       font-family: 'Kalam', cursive;
       font-size: 2rem;
   }
@@ -27,8 +31,7 @@
       top: -1px;
       left: 0;
       right: 0;
-      background-color: #fff;
-      box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+      background-color: rgba(10, 10, 10, .8) !important;
       z-index: 999;
       transition: background 1s ease; 
   }
@@ -36,17 +39,17 @@
       margin-left: auto;
   }
   .active{
-      color: #022569 !important;
+      color: #ac0000 !important;
   }
   .right a{
       font-family: 'Roboto', sans-serif;
       font-weight: 500;
       cursor: pointer;
-      color: #141313;
+      color: #e2dada !important;
   
   }
   .right a:hover{
-      color: #022569 !important;
+      color: #ac0000!important;
   }
 
   /*  Button  */
@@ -55,7 +58,7 @@
     padding: .8rem 2.2rem;
     font: normal 500 16px/20px var(--roboto);
     border-radius: 5px;
-    background: linear-gradient(to right, #022569,#3263bc);
+    background: linear-gradient(to right, #062f7c,#3263bc);
     color: whitesmoke;
     transition: all .6s linear;
     border-image-slice: 1;
@@ -64,8 +67,8 @@
  .button:hover{
     background: whitesmoke;
     transition: all .6s linear;
-    color: #444;
-    border-image-source: linear-gradient(to right, #022569, #3263bc);
+    color: #ac0000;
+    border-image-source: linear-gradient(to right, #062f7c, #3263bc);
     box-shadow: 1px 1px 10px #b1afaf;
 }
 .secondary-button{
@@ -75,11 +78,12 @@
     transition: all .6s linear;
     border-image-slice: 1;
     border-width: 2px;
-    border-image-source: linear-gradient(to right, #022569, #3263bc);
+    border-image-source: linear-gradient(to right, #062f7c, #3263bc);
+    color: #ac0000;
 
 }
 .secondary-button:hover{
-    background: linear-gradient(to right, #022569,#3263bc);
+    background: linear-gradient(to right, #062f7c,#3263bc);
     color: whitesmoke;
 }
 
@@ -89,22 +93,56 @@
 
   /* section main */
   .main {
-      height: 80vh;
+      position: relative;
+      background: url(../Images/Sarwar-bg.jpeg);
+      overflow: hidden;
   }
-  .padd{
+  
+  .main::before{
+     position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(100, 255, 100, .3);
+      
+     
+  }
+  .name-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+  }
+  /* .padd{
       padding-top: 100px;
-  }
+  } */
   .text_hi{
       font:normal 500 50px 'Roboto', sans-serif;
+      color: #062f7c;
   }
   .text_iam{
-      font:normal bolder 60px 'Roboto', sans-serif;
+      font:normal bolder 60px 'Kalam', cursive;
+      color: #fafafa;
+      text-shadow: 10px 10px 10px #57FEA9;
   }
   .text_junior{
       font-weight: bold;
       font-family:'Roboto', sans-serif;
-  
+      color: #ac0000;
   }
+  .image-column {
+      z-index: 1;
+  }
+
+  /*Start Intro Section */
+  .intro {
+      padding-top:25px;
+    
+  }
+
+  /*End Intro Section */
+
+
   /* Brand */
   .branding{
       box-sizing: border-box;
@@ -151,6 +189,10 @@
   /* Branding end */
   
   /* Service section */
+  .service {
+      padding-top: 10px;
+      background-color: #f8f9fa;
+  }
    .service .card:hover{
       box-shadow: var(--shadow);
       transition: all .6s ease;
@@ -159,6 +201,7 @@
   } 
   .service .card{
       transition: all .6s ease;
+      height: 23rem;
   }
 
   /* Isotop section */
