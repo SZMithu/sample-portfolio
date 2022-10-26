@@ -94,7 +94,7 @@
   /* section main */
   .main {
       position: relative;
-      background: url(../Images/Sarwar-bg.jpeg);
+      background: url(./Images/Sarwar-bg.jpeg);
       overflow: hidden;
   }
   
